@@ -1,3 +1,9 @@
+const themeBtn = document.getElementById('theme-toggle');
+const ApplyTheme = (theme) => {
+    if (theme == 'dark') document.body.classList.add('dark');
+    else document.body.classList.remove('dark');
+};
+
 const modal = document.getElementById('modal');
 const contactBtn = document.getElementById('contactBtn');
 const closeBtn = document.querySelector('.close');
