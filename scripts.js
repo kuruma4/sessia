@@ -4,6 +4,13 @@ const ApplyTheme = (theme) => {
     else document.body.classList.remove('dark');
 };
 
+if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+}
+applyTheme(localStorage.getItem('theme'));
 const modal = document.getElementById('modal');
 const contactBtn = document.getElementById('contactBtn');
 const closeBtn = document.querySelector('.close');
